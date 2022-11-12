@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <header>
+            <div>Logo</div>
+            <div>
+                <!--Comentario-->
+                <h1>Calculadora</h1>
+            </div>
+        </header>
+        <section>
+
+
+
+            <div class="row m-2">
+                <div class="col-6 text-end badge bg-black text-end">Numero uno:</div>
+                <div class="col-6"><input type="number" id="numUno" name="numUno" ></div>
+            </div>
+
+            <div class="row m-2">
+                <div class="col-6 text-end">Numero dos:</div>
+                <div class="col-6"><input type="number" id="numDos" name="numDos" ></div>
+            </div>
+        
+            <div class="row m-2">
+                <div class="col-6 text-end">Resultado:</div>
+                <div class="col-6"><input type="number" id="result" name="result"></div>
+            </div>
+
+            <div class="row m-2">
+                <div class="col-6 text-end"></div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary" onclick="Sumar()">Sumar</button>
+                    <button type="button" class="btn btn-warning" onclick="Restar()">Restar</button>
+                    <button type="button" class="btn btn-success" onclick="Multiplicar()">Multiplicar</button>
+                    <button type="button" class="btn btn-info" onclick="Dividir()">Dividir</button>
+                </div>
+            </div>
+
+           
+        </section>
+        
+    </body>
+    <script>
+        function Sumar(){
+            let numUno= parseInt(document.getElementById('numUno').value);
+            let numDos=parseInt(document.getElementById('numDos').value);
+            let result=numUno+numDos;
+            document.getElementById('result').value=result;
+        }
+        function Restar(){
+            let numUno=parseInt(document.getElementById('numUno').value);
+            let numDos=parseInt(document.getElementById('numDos').value);
+            let result=numUno-numDos;
+            document.getElementById('result').value=result;
+        }
+        function Multiplicar(){
+            let numUno=parseInt(document.getElementById('numUno').value);
+            let numDos=parseInt(document.getElementById('numDos').value);
+            let result=numUno*numDos;
+            document.getElementById('result').value=result;
+        }
+        function Dividir (){
+            let numUno = parseInt(document.getElementById('numUno').value);
+            let numDos =parseInt(document.getElementById('numDos').value);
+            let result=numUno/numDos;
+            document.getElementById('result').value=result;
+        }
+
+    </script>
+</html>

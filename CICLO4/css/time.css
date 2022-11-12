@@ -1,0 +1,33 @@
+body{
+    background-color:rgb(63, 59, 59);
+    margin: 0px;
+    background-image: url('../img/Ibanez_JS1CR-860x285.jpg');
+}
+
+button{
+    background-color: brown;
+    height: 50px;
+    width: 300px;
+    /* recordar que en el trabajo inertamos las imagenes porque esta porqueria de computador tod se complica*/
+}
+/* este boton es si quiero hacer aklgo difernte con el */
+.button{
+    background-color: brown;
+    height: 50px;
+    width: 300px;
+    background-image: url('');
+    background-size: 300px;
+
+}
+.carretera{
+    background-image: url('../img/carretera.jfif');
+    height: 400px;
+}
+/*aui estoy dandole margenes, tamaño, etcccccc*/
+.carro{
+    width: 350px;
+}
+
+.persona{
+    width: 400px;
+}

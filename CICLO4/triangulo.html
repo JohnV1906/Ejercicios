@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Areas</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <header>
+            <div class="row text-center">
+                <h1>Areas</h1>
+            </div>
+        </header>
+
+        <section>
+            <div class="row">
+                <div class="col-6 text-end">
+                    <img onclick="areaTriangulo()" src="./img/triangulo.png">
+                    <div id="divTria" style="position:absolute; top:150; left:290">0</div>
+                </div>
+                <div class="col-6">
+                    Base:
+                    <input type="number" id="base">
+                    Altura:
+                    <input type="number" id="altura" onkeyup="areaTriangulo()">
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+
+        function areaTriangulo(){
+            let base=parseInt(document.getElementById('base').value);
+            let altura=parseInt(document.getElementById('altura').value);
+            let area= base*altura/2;
+            document.getElementById('divTria').innerHTML=area;
+        }
+    </script>
+</html>

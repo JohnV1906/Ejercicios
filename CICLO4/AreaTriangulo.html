@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <!--este es el encabezado lo que aparece en el buscador arriba de la pagina en este caso AREA TRIANGUL-->
+        <title>AREA TRIANGULO</title>
+        <!--esta es la etiqueta para importar la libreria bustrapt-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--ahora cierro el encabezado-->    
+    </head>
+    <!--ahora comienzo a editar el cuepri del programa de la pagina con la etiqueta body-->
+    <body>
+        <!--ahora con la etiqueta header editop el encabezado de la pagina-->
+        <header>
+            <!--con la etiqueta div lo que ago es comenzar a dividir mi pagina web como en divisiones, 
+            entonces con mi clase que eun identificador global le asigno entre comillas "fila texto centrado"-->
+            <div class="row text-center">
+                <!--ahora con la etiqueta h1 que es titulo, afrego lo que yo deseo de titulo en mi pagina prip-->
+                <h1>Calcular Area Triangulo</h1>
+            <!--cierro mi division-->
+            </div>
+        <!--cierro mi ebcabezado de la pagina-->
+        </header>
+<!--ahora voy a realizar una seccion que es basicamente un contenedor , es como un cuadro de texto que dentro
+dentro de el ago cosas y puedo acomodar ese cuadro de texto en word.-->
+        <section>
+            <img  onclick="areaTriangulo()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbl864gPVvXXAOfcDUJ0t7QX_OnAf1jByeA&usqp=CAU">
+                <div id="areaT" style="position:absolute; top:270; left:290">
+                    resultado:
+                    <input type="number"  id="resultado"></div>
+
+                <div class="col-6">
+                    base:
+                    <input type="number" id="base">
+                    altura:
+                    <input type="number" id="altura" onkeyup="areaTriangulo()">
+                   
+                </div>
+            </div>
+        </section>
+    </body>
+    <!-- esta etiqueta script basicamente es para  srealizar mi operaciones o los calculos , es como el backend-->
+    <script>
+        function areaTriangulo(){
+            let base= parseInt(document.getElementById('base').value);
+            let altura=parseInt(document.getElementById('altura').value);
+            let area= base*altura/2;
+            document.getElementById('areaT').innerHTML=area;
+        }
+    </script>
+</html>
